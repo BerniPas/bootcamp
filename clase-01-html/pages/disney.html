@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Disney</title>
     <!-- 1. Agregar los estilos en el mismo archivo de html -->
     <!-- Etiqueta <style>: puedo escribir CSS aquí -->
     <style>
         /* 1. EL selector: es el elemento al que menciono para darle los estilos */
-        h1 {
+        h1, h2 {
             /* 2. Necesito definir la propiedad a modificar */
             color: #BB5196;
             /* Propiedad: color */
@@ -17,24 +17,70 @@
             /* #BB5196 */
         }
 
+/*         h2{
+            color: #BB5196;
+        } */
+
         img{
             /* 1. Ancho de la imagen */
             width: 450px
         }
     </style>
 
+    <link rel="stylesheet" href="../css/disney.css">
 </head>
 
 <body>
+
+        
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html"><!-- link para una ruta relativa: dentro de mis archivos -->
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="./disney.html"><!-- link para una ruta relativa: dentro de mis archivos -->
+                    Disney
+                </a>
+            </li>
+            <li>
+                <a href="https://www.educacionit.com/bootcamp-full-stack"><!-- link a una ruta absoluta: fuera de mis archivos -->
+                    EducaciónIT
+                </a>
+            </li>
+            <li>
+                <a href="./assets/datosGithub.pdf" download><!-- link para descargar un archivo -->
+                    Descarga los datos de GitHub
+                </a>
+            </li>
+        </ul>
+    </nav>
 
     <!-- 2. Agregar estilo inline: en línea : en la etiqueta del elemento -->
     <div style="text-align: center;">
         <img src="../assets/img/logo-disney-hotels.png" alt="logo de los hoteles">
     </div>
 
+    <!-- Funciona, pero no se recomienda -->
+    <style>
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333333;
+        }
+    </style>
+
     <h1>
         Conoce los Hoteles
     </h1>
+
+    <h2>
+        Disney's Pop Century Resort
+    </h2>
 
     <!-- 2. Agregar los estilos inline: en línea : en la etiqueta del elemento -->
     <p style="color: #576DB6;">
@@ -63,6 +109,32 @@
         pastas y
         pizzas y especialidades a la parrilla.
     </p>
+
+    <h2>
+        Disney's Caribbean Beach Resort
+    </h2>
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, corrupti. Praesentium molestias illum unde voluptate dolores, ex atque totam at deleniti odit, quo rem aliquam maiores sapiente! Animi, temporibus impedit.
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, corrupti. Praesentium molestias illum unde voluptate dolores, ex atque totam at deleniti odit, quo rem aliquam maiores sapiente! Animi, temporibus impedit.
+    </p>
+    
+    <h2>
+        Disney's Animal Kingdom Lodge
+    </h2>
+    
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, corrupti. Praesentium molestias illum unde voluptate dolores, ex atque totam at deleniti odit, quo rem aliquam maiores sapiente! Animi, temporibus impedit.
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, corrupti. Praesentium molestias illum unde voluptate dolores, ex atque totam at deleniti odit, quo rem aliquam maiores sapiente! Animi, temporibus impedit.
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, corrupti. Praesentium molestias illum unde voluptate dolores, ex atque totam at deleniti odit, quo rem aliquam maiores sapiente! Animi, temporibus impedit.
+    </p>
+    
 </body>
 
 </html>
