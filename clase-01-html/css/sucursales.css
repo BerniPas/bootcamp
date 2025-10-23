@@ -1,0 +1,46 @@
+
+
+* {
+    margin: 0; /* elimina los margenes por defecto */
+    padding: 0; /* elimina los espacios por defecto */
+    box-sizing: border-box; /* incluye el padding y border en el ancho y alto total */
+}
+
+
+img{
+    margin-top: 50px; /* el margen es la distancia entre tags */
+    margin-left: 100px;
+    margin-bottom: 50px;
+    margin-right: 150px;
+}
+
+.center{
+    text-align: center; /* alinea el texto al centro */
+}
+
+.perez{
+    margin: 50px;
+}
+
+h1{
+    border: blue 3px dotted;
+    /* padding es el espacio interno entre el contenido y el borde */
+    padding-top: 80px;
+    padding-left: 100px;
+    padding-bottom: 90px    ;
+    margin-top: 35px;
+}
+
+h2{
+    background-color: green;
+    color: white;
+}
+
+#titulo{
+    background-color: black; /* color de fondo */
+    color: white; /* color del texto */
+    /* text-align: right; */ /* alineación del texto: derecha */
+    text-align: center; /* alineación del texto: centrado */
+}
+
+

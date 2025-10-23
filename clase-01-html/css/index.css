@@ -6,6 +6,13 @@ body{/* selector */
     background-color: rgb(196, 196, 238);/* r = red, g = green, b = blue */
 }
 
+/* Estilo global */
+* {
+    margin: 0; /* elimina los margenes por defecto */
+    padding: 0; /* elimina los espacios por defecto */
+    box-sizing: border-box; /* incluye el padding y border en el ancho y alto total */
+}
+
 
 
 
