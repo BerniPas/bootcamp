@@ -1,46 +1,121 @@
+/* Método 2: importamos la tipografía de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+
+/* Método 3: descarga la tipografía de Dafont */
+/* configuramos el uso de la tipografía descargada */
+@font-face {
+    font-family: 'MiTipografia';/* 1. creamos un nombre para la tipografía */
+    src: url('../assets/fonts/RoyaltyFree.ttf'); /* 2. especificamos la ubicación de la tipografía */
+}
 
 * {
-    margin: 0; /* elimina los margenes por defecto */
-    padding: 0; /* elimina los espacios por defecto */
-    box-sizing: border-box; /* incluye el padding y border en el ancho y alto total */
+    margin: 0;
+    /* elimina los margenes por defecto */
+    padding: 0;
+    /* elimina los espacios por defecto */
+    box-sizing: border-box;
+    /* incluye el padding y border en el ancho y alto total */
+}
+
+/* acomodamos el header */
+.acomodar{
+    width: 100%; /* todo el ancho del dispositivo */
+    background-color: #767575;
+    height: 200px;
+}
+
+.logo{
+    width: 250px; /* ancho del logo */
+    /*  height: 100px; ya no sería necesario */
+    margin-left: 20px;
+    margin-top: 15px;
+    float: left;
+}
+
+button{
+    float: right;
+    padding: 25px;
+    margin-top: -80px;
+    margin-right: 20px;
+}
+
+.empresa{
+    background-color: #767575;;
+    color: black;
+    line-height: 150px;
 }
 
 
-img{
-    margin-top: 50px; /* el margen es la distancia entre tags */
+img {
+    margin-top: 50px;
+    /* el margen es la distancia entre tags */
     margin-left: 100px;
     margin-bottom: 50px;
     margin-right: 150px;
 }
 
-.center{
-    text-align: center; /* alinea el texto al centro */
+.center {
+    text-align: center;
+    /* alinea el texto al centro */
+    margin-top: 25px;
 }
 
-.perez{
+.perez {
     margin: 50px;
 }
 
-h1{
+.fontdiferente {
+    font: bold;
+    /* tipo de fuente: negrita */
+    color: #000000;
+    /* color del texto: rojo */
+    font-size: 20px;
+    /* tamaño de la fuente 16px */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* tipo de letra */
+}
+
+/* 2. Agregar estilos de Google Fonts */
+.ms-madi-regular {
+    font-family: "Ms Madi", cursive;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-size: 32px;
+}
+
+/* 3. Agregar estilos de la tipografía descargada */
+.descargafont{
+    font-family: MiTipografia;
+    font-size: 36px;
+}
+
+h1 {
     border: blue 3px dotted;
     /* padding es el espacio interno entre el contenido y el borde */
     padding-top: 80px;
     padding-left: 100px;
-    padding-bottom: 90px    ;
+    padding-bottom: 90px;
     margin-top: 35px;
 }
 
-h2{
+h2 {
     background-color: green;
     color: white;
 }
 
-#titulo{
-    background-color: black; /* color de fondo */
-    color: white; /* color del texto */
-    /* text-align: right; */ /* alineación del texto: derecha */
-    text-align: center; /* alineación del texto: centrado */
+#titulo {
+    background-color: black;
+    /* color de fondo */
+    color: white;
+    /* color del texto */
+    /* text-align: right; */
+    /* alineación del texto: derecha */
+    text-align: center;
+    /* alineación del texto: centrado */
 }
-
-
