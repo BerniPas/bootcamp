@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+
+    <h1 style="text-align: center; margin-top: 50px;">
+        Formularios en HTML
+    </h1>
+    
+    <!-- formularios en html -->
+    <form method="get" id="formulario" action="index.js"><!-- obtener datos sin modificar nada en la base de datos -->
+        
+    </form>
+    
+    <!-- formularios en html -->
+    <form method="post" id="formulario2" action="index.js"><!-- obtener datos, enviarlos y modificarlos en la base de datos -->
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" minlength="3" maxlength="30" required><!-- datos alfanuméricos -->
+        <br>
+        <label for="edad">Edad: </label>
+        <input type="number" id="edad" min="1" max="100" required><!-- datos numéricos -->
+        <br>
+        <button type="submit"><!-- rol del botón: enviar los datos -->
+            Enviar Datos
+        </button>
+        <br>
+        <button type="reset"><!-- rol del botón: borrar los datos -->
+            Borrar Datos
+        </button>
+        <br>
+        <button type="button" style="width: 150px; height: 40px;"><!-- rol del botón: sin función definida -->
+            <a href="./home.html">Inicio</a>
+        </button>
+        <br>
+        <input type="submit" value="Soy un botón tipo input">
+        <br>
+        <input type="reset" value="Borrar datos tipo input"><!-- rol del input: borrar los datos -->
+
+    </form>
+
+</body>
+</html>
