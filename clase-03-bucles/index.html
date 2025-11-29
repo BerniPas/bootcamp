@@ -19,6 +19,32 @@
       Productos - Bebidas
     </h1>
   </div>
+  <!-- el contenido lo completamos con JS -->
+  <h1 class="mt-5" id="titulo">
+    
+  </h1>
+
+  <!-- captura de datos del formulario -->
+  <form action="" class="mt-4 mb-4 container">
+    <label for="producto">Producto:</label>
+    <input type="text" id="nombreProducto" name="nombreProducto" placeholder="Gaseosas" required>
+    <br>
+
+    <label for="precio">Precio:</label>
+    <input type="number" id="precioProducto" name="precioProducto">
+    <br>
+
+    <button 
+        type="button" 
+        class="btn btn-success"
+        onclick="capturaDatos()">
+            Agregar producto
+    </button>
+
+
+    <br>
+    <button type="reset" class="btn btn-danger">Borrar</button>
+  </form>
 
   <div class="productos container">
     <div>
@@ -40,6 +66,8 @@
       <img src="https://c92abd90.delivery.rocketcdn.me/main-files/uploads/2023/04/estrategia-de-producto-ejemplo-Cocacola-1024x554.png" alt="" srcset="">
     </div>
   </div>
+
+
 
 
 
