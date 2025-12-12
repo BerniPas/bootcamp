@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS - Primer forma de uso -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <title>Document</title>
+  <title>Descripcion del Producto</title>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +29,7 @@
             Dropdown
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="./descripcion.html">Descripción</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -36,6 +38,9 @@
         <li class="nav-item">
           <a class="nav-link" href="./calcaularIva.html" aria-disabled="true">Calcular Iva</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -43,64 +48,14 @@
       </form>
     </div>
   </div>
-</nav>
-
-<div>
-  <h1 class="text-center mt-4 mb-4">
-    Login Page con addEventListener
-  </h1>
-</div>
+    </nav>
 
 
-<form class="container mt-4 mb-5" id="formulario">
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password con 8 caracteres como mínimo" required>
-  </div>
-
-  <div class="text-center">
-    <button type="submit" class="btn btn-success w-25">Login</button>
-    <button type="reset" class="btn btn-danger w-25">Limpiar</button>
-  </div>
-</form>
-
-
-
-
-<div>
-  <h1 class="text-center mt-4 mb-4">
-    Login Page con onclick
-  </h1>
-</div>
-<form class="container mt-4" id="formularioDos">
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="emailDos" placeholder="name@example.com">
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="passwordDos" placeholder="Password">
-  </div>
-
-  <div class="text-center">
-    <button type="button" onclick="login()" class="btn btn-primary w-25">Login</button>
-    <button type="reset" class="btn btn-warning w-25">Limpiar</button>
-  </div>
-</form>
   
 
 
-
-
-
-
-
+  
+  <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-<script src="../js/login.js"></script>
 </body>
 </html>
