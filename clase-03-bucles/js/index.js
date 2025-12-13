@@ -25,6 +25,49 @@ const descripcion = () =>{
 }
 
 
+let searchForm = document.getElementById("searchForm");
+let searchInput; // Capturamos el valor del input de búsqueda
+
+searchForm.addEventListener("submit", function(event) {
+  event.preventDefault(); // para que no se recargue la página
+
+  searchInput = document.getElementById("search").value; 
+  searchInput = searchInput.toLowerCase();
+  // Lista de Productos
+  const productos = ["Camisa", "Pantalón", "Zapatos", "Sombrero", "Chaqueta"];
+
+  // utilizamos el método filter para buscar productos que coincidan con la búsqueda
+
+  //let resultado = productos.find(); //5
+
+  // usar for para buscar el producto
+  let encontrado = false;
+  for (let i = 0; i < productos.length; i++) {
+    if (searchInput === productos[i].toLowerCase()) {
+      alert("Producto encontrado: " + productos[i]);
+      encontrado = true;
+      break; // Salimos del bucle si encontramos el producto
+    }
+  }
+
+  if (!encontrado) {
+    alert("Producto no encontrado");
+  }
+
+  // Limpiar el input de búsqueda
+  // Puede estar en una función aparte, en la de abajo y llamarla aquí
+  document.getElementById("search").value = "";
+  searchForm.reset();
+
+});
+
+
+
+
+const clearSearching = () =>{
+}
+
+
 
 
 
