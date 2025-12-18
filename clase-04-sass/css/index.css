@@ -1,0 +1,15 @@
+/* 1. Importar el arhivo de _variables.scss */
+/* 1. En SASS podemos generar variables para colores, fuentes, etc. como en JS */
+/* 2. Utilizamos las variables para definir estilos en nuestro CSS */
+body {
+  background-color: #e69292;
+}
+
+p {
+  font-family: "Arial, sans-serif";
+  color: #070707;
+}
+
+footer {
+  background-color: #e69292;
+}

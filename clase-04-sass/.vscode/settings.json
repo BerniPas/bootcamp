@@ -1,0 +1,5 @@
+
+/* Configuramos que el compilador de SCSS no cree un archivo .map */
+{
+    "liveSassCompile.settings.generateMap": false
+}

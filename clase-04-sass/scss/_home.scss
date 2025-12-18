@@ -1,0 +1,11 @@
+
+
+/* 2. Utilizamos las variables para definir estilos en nuestro CSS */
+body{
+  background-color: $color-de-fondo;
+}
+
+p{
+  font-family: $fuente-principal;
+  color: $color-de-texto;
+}
