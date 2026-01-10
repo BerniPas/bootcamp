@@ -32,6 +32,21 @@
     <p>Esta es la página principal del bootcamp.</p>
   </main>
 
+  <section class="container">
+    <h2>Login</h2>
+    <form method="post" class="login-form" id="loginForm">
+      <div class="mb-3">
+        <label for="email" class="form-label">Usuario</label>
+        <input type="text" id="email" name="email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" id="password" name="password" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Ingresar</button>
+      <button type="reset" class="btn btn-primary">Limpiar</button>
+    </form>
+  </section>
 
   <footer>
     <div class="container text-center">
@@ -41,5 +56,6 @@
 
 
 
+  <script src="./js/index.js"></script>
 </body>
 </html>

@@ -9,12 +9,13 @@ const path = require('node:path');
 const app = express();
 
 /* 4. Definimos el puerto */
-const PORT = 3000;
+const PORT = 3000; // React por defecto usa el puerto 3000
 
 /* 5. Definimos la carpeta pública */
 app.use(express.static(path.join(__dirname, 'public')));
 
 /* 6. Ejecutamos la aplicación */
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor escuchando en el puerto http://localhost:${PORT}`);
 });
+
