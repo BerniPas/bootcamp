@@ -14,7 +14,6 @@ navegacion.style.display = "flex";
 navegacion.style.alignItems = "center";
 navegacion.style.paddingLeft = "20px";
 
-
 // 4. Agregamos la barra de navegación al div principal
 divPrincipal.appendChild(navegacion)
 

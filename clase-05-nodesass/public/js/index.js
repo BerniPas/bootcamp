@@ -24,6 +24,7 @@ const loginUser = (e) => {
 
   // Creamos la lógica para validar el login
   if (email === adminUser && password === adminPassword) {
+    
     console.log("Login exitoso");
 
     // si el user se logea correctamente
@@ -35,9 +36,12 @@ const loginUser = (e) => {
     localStorage.setItem("isLoggedIn", login);
 
     alert("Login exitoso");
+    
     // Redirigir a la página de administración
     window.location.href = "./pages/formulario.html";
+
   } else {
+
     console.log("Credenciales inválidas");
 
     // si el user no se logea correctamente
@@ -47,6 +51,8 @@ const loginUser = (e) => {
     localStorage.setItem("isLoggedIn", login);
     
     alert("Credenciales inválidas, por favor intente de nuevo.");
+
+
   }
   
 

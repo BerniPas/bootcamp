@@ -17,7 +17,7 @@
             <a class="nav-link active" href="../index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./productos.ht.ml">Productos</a>
+            <a class="nav-link" href="./productos.html">Productos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./formulario.html">Formulario</a>
@@ -28,23 +28,27 @@
   </nav>
 
 
+  <h1 id="userAdmin">
+    
+  </h1>
+
   <button type="button" id="cerrar">Cerrar Sesión</button>
 
 
   <h1>Agregar Producto</h1>
-  <form action="#" method="post">
+  <form action="#" method="post" id="formProductos">
     <label for="nombre">Nombre del producto:</label>
     <input type="text" id="nombre" name="nombre" required>
 
-    <label for="cantidad">Cantidad:</label>
-    <input type="number" id="cantidad" name="cantidad" min="1" required>
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio" name="precio" min="1" required>
 
     <label for="stock">Stock:</label>
-    <input type="number" id="stock" name="stock" min="0" required>
+    <input type="number" id="stock" name="stock" min="1" required>
 
     <button type="submit">Guardar</button>
   </form>
 
-  <script src="../js/formulario.js"></script>
+  <script src="../js/formulario.cjs"></script>
 </body>
 </html>
