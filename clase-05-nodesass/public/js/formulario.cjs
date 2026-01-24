@@ -77,9 +77,14 @@ formProductos.addEventListener("submit", (e) => {
 
     // Guardamos el arreglo de productos en el localStorage
     localStorage.setItem("productos", JSON.stringify(productos));
+
+    // llamar a la función que envía los datos al backend
     
 
 });
+
+
+// Crear una función que también envé los datos al backend
 
 
 
