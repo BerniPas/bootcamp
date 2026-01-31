@@ -100,7 +100,9 @@ formProductos.addEventListener("submit", (e) => {
 
     enviarDatosAlBackend(compraProductos, tiendaOnline); */
 
-    enviarAjax(producto);
+    //enviarAjax(producto);// función con XMLHttpRequest
+
+    enviarFetch(producto); // función con Fetch API
 
     // Reseteamos el formulario
     formProductos.reset();
@@ -151,9 +153,35 @@ function enviarAjax(producto) {
 
 }
 
-
 // Función fetch API para enviar datos al backend ES6+
+const enviarFetch = (producto) => {
 
+    // obtener la url del backend
+    let url = "http://localhost:3000/reciboproductos";
+
+    // enviamos la petición usando fetch
+    fetch(url, {
+        method: "POST", 
+        headers: {
+            "Content-Type": "application/json;charset=UTF-8"
+        },  
+        body: JSON.stringify(producto)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Error al enviar el producto al backend: " + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log("Producto enviado al backend:", producto);
+        console.log("Respuesta del servidor:", data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
+
+};
 
 
 

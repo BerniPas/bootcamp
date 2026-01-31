@@ -22,11 +22,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Creamos una ruta para recibir datos del formulario
 app.post("/reciboproductos", (peticion, respuesta) => {
 
+  //puedo cambiar el nombre de las variables que recibo
+  let nombredelproducto = peticion.body.nombre;
+  let preciodelproducto = peticion.body.precio;
+  let stockdelproducto = peticion.body.stock;
+
 
   console.log(peticion);
 
   console.log("===============================================================/*  */");
   console.log("===============================================================/*  */");
+
+  console.log(peticion.method);
+  console.log(peticion.url);
+  console.log(peticion.headers);
+  console.log(peticion.body); // Aquí tenemos el objeto con los datos enviados desde el formulario
+  
   
   
 
@@ -35,6 +46,10 @@ app.post("/reciboproductos", (peticion, respuesta) => {
 
     console.log(peticion.body.nombre, peticion.body.precio, peticion.body.stock);
     
+    // Enviamos una respuesta al cliente
+    respuesta.status(201).json({
+      mensaje: "Producto recibido correctamente",
+    });
 
 });
 
