@@ -52,7 +52,7 @@ form.addEventListener("submit", (e) => {
   // Llamamos a la función para enviar los datos al servidor
   sendDataToServer(formData);
 
-  alert("Mensaje enviado correctamente 🚀");
+  //alert("Mensaje enviado correctamente 🚀");
   form.reset();
 });
 
@@ -77,8 +77,10 @@ const sendDataToServer = (data) => {
   .then(response => response.json())
   .then(data => {
     console.log("Success:", data);
+    alert(data.message); // Mostrar mensaje de éxito al usuario 
   })
   .catch((error) => {
+    alert("Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.");
     console.error("Error:", error);
   });
 

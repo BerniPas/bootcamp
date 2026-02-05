@@ -30,6 +30,7 @@ function showError(message) {
 
 
 form.addEventListener("submit", function (event) {
+
   event.preventDefault();
 
   let hasErrors = false;
@@ -97,17 +98,17 @@ form.addEventListener("submit", function (event) {
   }
 
   // Imagen
-  const file = imageInput.files[0];
+/*   const file = imageInput.files[0];
   if (!file) {
     showError("Debe seleccionar una imagen");
     hasErrors = true;
-  }
+  } */
 
 
-  if (hasErrors) {
+/*   if (hasErrors) {
     console.log("Formulario con errores");
     return;
-  }
+  } */
 
 
   const product = {
@@ -121,10 +122,17 @@ form.addEventListener("submit", function (event) {
     freeShipping: shippingInput.checked,
     ageFrom: Number(ageFromInput.value),
     ageTo: Number(ageToInput.value),
-    image: file.name
+    //image: file.name
   };
 
   products.push(product);
+
+  console.log("Los datos ingresados: ");
+  
+  console.log(product);
+
+  // llamada a la función para enviar los datos al backend
+  enviarDatos(product);        
 
   console.log("Producto creado:", product);
   console.log("Listado de productos:", products);
@@ -132,3 +140,26 @@ form.addEventListener("submit", function (event) {
 
   form.reset();
 });
+
+// Función para enviar los datos al backend 
+const enviarDatos = (producto) => {
+
+  let url = "http://localhost:3000/productos"; // URL del endpoint en el backend
+  
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(producto)
+    
+  })  
+  .then(response => response.json())
+  .then(data => {
+    console.log("Success:", data);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });   
+
+}
