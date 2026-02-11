@@ -142,24 +142,29 @@ form.addEventListener("submit", function (event) {
 });
 
 // Función para enviar los datos al backend 
-const enviarDatos = (producto) => {
-
-  let url = "http://localhost:3000/productos"; // URL del endpoint en el backend
+const enviarDatos = async (producto) => {
   
-  fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(producto)
-    
-  })  
-  .then(response => response.json())
-  .then(data => {
-    console.log("Success:", data);
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });   
+  const url = "http://localhost:3000/productos";
 
-}
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(producto)
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error HTTP: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log("Success:", data);
+    return data;
+
+  } catch (error) {
+    console.error("Error:", error);
+    throw error;
+  }
+};
