@@ -1,0 +1,28 @@
+{
+  "name": "plantillas",
+  "version": "1.0.0",
+  "description": "Iniciamos un proyecto con motores de plantillas con Handlebars",
+  "keywords": [
+    "Motores",
+    "de",
+    "Plantillas",
+    "Express",
+    "Mongo",
+    "DataBase"
+  ],
+  "license": "ISC",
+  "author": "Bootcamp",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.2",
+    "path": "^0.12.7"
+  }
+}
