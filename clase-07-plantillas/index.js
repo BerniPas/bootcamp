@@ -24,6 +24,11 @@ const fs = require("node:fs");
 // 3. Middelwares 
 app.use(express.json())
 
+// Uun get de salud del servidor
+app.get("/health", (req, res)=>{
+    res.send("Servidor OK")
+})
+
 // 4. Rutas del GET - Obtiene datos del servidor
 app.get("/html", (req, res)=>{
   // enviar html
@@ -136,7 +141,7 @@ app.get("/html", (req, res)=>{
     </footer>
 
 </body>
-      `);
+    `);
 });
 
 app.get("/descargas", (req, res)=>{
@@ -146,20 +151,52 @@ app.get("/descargas", (req, res)=>{
 
 app.get("/json", (req, res)=>{
   // respondemos con datos de tipo json
-  const persona = {
-    nombre: "Pedro",
-    dni: 123456789,
-    provincia: "CABA"
-  }
+    const persona = {
+        nombre: "Pedro",
+        dni: 123456789,
+        provincia: "CABA"
+    }
 
-  res.json(persona)
+    res.json(persona)
 })
 
-
-app.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto http://localhost:${PORT}`);
+app.get("/file", (req, res)=>{
+  // respondemos con un archivo
+    res.sendFile(path.join(__dirname, "index.html"))
 });
+
+app.get("/template", (req, res)=>{
+  // respondemos con unos datos del so 
+    const datosSO = {
+        // obtenemos datos del sistema operativo con el módulo os
+        plataforma: os.platform(),
+        // obtenemos la versión del sistema operativo con el módulo os
+        version: os.version(),
+        // obtenemos la memoria total del sistema operativo con el módulo os
+        // lo medimos en bytes, por eso lo dividimos por 1024 para pasarlo a KB, y luego por 1024 para pasarlo a MB
+        memoriaTotal: os.totalmem(),
+        memoriaLibre: os.freemem()
+    }
+
+    let total = datosSO.memoriaTotal / 1024 / 1024
+    let libre = datosSO.memoriaLibre / 1024 / 1024
+
+    res.send(`<h1>Datos del Sistema Operativo</h1>
+    <ul>
+        <li>Plataforma: ${datosSO.plataforma}</li>      
+        <li>Versión: ${datosSO.version}</li>
+        <li>Memoria Total: ${total.toFixed(2)} MB</li>
+        <li>Memoria Libre: ${libre.toFixed(2)} MB</li>
+    </ul>`)
+});
+
+// lo llevamos al server.js para levantar el servidor
+/* app.listen(PORT, () => {
+    console.log(`Servidor escuchando en el puerto http://localhost:${PORT}`);
+}); */
 
 // no vamos a levantar el servidor en este archivo
 // Paso importante: exportar la app configurada con los datos de arriba
-//module.exports = app
+// exportamos la app para usarla en otro archivo, por ejemplo en server.js
+// esportamos un solo valor, que es la app configurada con los datos de arriba
+module.exports = app
