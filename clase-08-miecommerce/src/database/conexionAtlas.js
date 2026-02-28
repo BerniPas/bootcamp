@@ -11,7 +11,7 @@ dotenv.config();
 const MONGO_PASSWORD = process.env.MONGO_PASSWORD
 
 // 4. Construir la URI de conexión a MongoDB utilizando la contraseña
-const uri = `mongodb+srv://pastorbernal:${MONGO_PASSWORD}@cluster0.btrbimd.mongodb.net/?appName=Cluster0`;
+const uri = `mongodb+srv://pastorbernal:${MONGO_PASSWORD}@cluster0.btrbimd.mongodb.net/ecommerce?appName=Cluster0`;
 
 const clientOptions = { 
   serverApi: 

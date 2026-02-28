@@ -11,20 +11,20 @@ const PORT = process.env.PORT || 8080;
 
 // 1. Conexión a MongoDB Atlas
 // Importar la función de conexión a MongoDB
-//const conexionMongo = require('./database/conexionAtlas');
+const conexionMongo = require('./database/conexionAtlas');
 
 // Establecer la conexión a MongoDB antes de iniciar el servidor
-//conexionMongo();
+conexionMongo();
 
 
 // 2. Conexión a MongoDB local
 // Importar la función de conexión a MongoDB local
-const conexionMongoLocal = require('./database/conexionLocal');
+//const conexionMongoLocal = require('./database/conexionLocal');
 // Establecer la conexión a MongoDB local antes de iniciar el servidor
-conexionMongoLocal();
+//conexionMongoLocal();
 
 app.listen(PORT, () => {
-    console.log(`Servidor escuchando en el puerto ${PORT}`);
+    console.log(`Servidor escuchando en el puerto http://localhost:${PORT}`);
 });
 
 
