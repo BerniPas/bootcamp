@@ -6,7 +6,7 @@ const hbs = require('express-handlebars');
 const path = require('path');
 
 // Importar rutas
-const usuariosRouter = require('./routes/usuarios');
+const usuariosRouter = require('./routes/usuariosRoutes');
 
 // Crear el servidor
 const app = express();
