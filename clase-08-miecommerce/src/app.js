@@ -7,6 +7,7 @@ const path = require('path');
 
 // Importar rutas
 const usuariosRouter = require('./routes/usuariosRoutes');
+const productosRouter = require('./routes/productosRoutes');
 
 // Crear el servidor
 const app = express();
@@ -31,6 +32,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // Utilizamos las Rutas
 app.use('/api/usuarios', usuariosRouter);
+app.use('/api/productos', productosRouter);
 
 app.get('/', (req, res) => {
     res.render('home');

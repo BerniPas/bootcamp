@@ -22,7 +22,7 @@ const usuarioCollection = new mongoose.Schema({
         trim: true,
         lowercase: true,
         //match: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/ // expresión regular para validar el formato del email
-      },
+    },
     password:{
         type: String,
         required: true,
