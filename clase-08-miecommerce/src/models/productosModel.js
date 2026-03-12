@@ -30,6 +30,18 @@ const productoSchema = new mongoose.Schema({
     }
 });
 
+// Opcional: enviar sólo los campos necesarios al cliente, sin el _id, __v, etc.
+/* productoSchema.set('toJSON', {
+  transform: (doc, ret) => {
+    ret.id = ret._id; // renombrar _id a id
+    delete ret._id;
+    delete ret.__v;
+    delete ret.dataRegistro; // eliminar la fecha de registro si no es necesaria en la respuesta
+    delete ret.precio; // eliminar la descripción si no es necesaria en la respuesta
+    return ret;
+  } }); */
+
+
 
 //3. Exportar el modelo
 module.exports = mongoose.model('producto', productoSchema);

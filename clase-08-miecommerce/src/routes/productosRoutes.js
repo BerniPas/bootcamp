@@ -7,7 +7,8 @@ const router = Router();
 const { 
     dameFormulario,
     guardarProducto,
-    listarProductos
+    listarProductos,
+    detallesProducto
 } = require('../controllers/productosController');
 
 
@@ -21,6 +22,9 @@ router.post('/guardarProducto', guardarProducto);
 
 //3. Ruta para listar los productos guardados en la base de datos
 router.get('/listarProductos', listarProductos);
+
+//4. Ruta para mostrar los detalles de un producto específico 
+router.get('/detalleProducto/:id', detallesProducto);
 
 
 
