@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  {{!-- links de css de cada plantilla que utilizamos --}}
+  <link rel="stylesheet" href="/css/styles.css"> {{!-- estilos generales --}}
+  <link rel="stylesheet" href="/css/{{estilos}}"> {{!-- estilos específicos para la página de error --}}
+  <title>Mi Ecommerce</title>
+</head>
+<body>
+  
+
+  {{!-- inyecto el partials de navegación para que aparezca en todas los templates --}}
+  {{> navegacion}}
+
+
+
+  {{{ body }}} {{!-- seteo a main como diseño/modelo de todas las plantillas --}}
+
+
+  {{> footer}} {{!-- inyecto el partials de footer para que aparezca en todas los templates --}}
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  {{!-- Link a Jquery --}}
+<script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+
+</body>
+</html>

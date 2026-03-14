@@ -1,0 +1,18 @@
+<h1>Carrito de Compras</h1>
+
+
+<div class="card" style="width: 50%; max-width: 300px; margin: auto;">
+  {{#if producto.imagen}}
+  <img src="{{producto.imagen}}" alt="{{producto.nombre}}" class="card-img" style="width: 100%;">
+  {{/if}}
+  <div class="card-body">
+    <h5 class="card-title">{{producto.nombre}}</h5>
+    <p class="card-text">Precio: ${{producto.precio}}</p>
+    {{#if producto.descripcion}}
+    <p class="card-text">{{producto.descripcion}}</p>
+    {{/if}}
+  </div>
+
+  <a href="https://www.mercadopago.com.ar/checkout/v1/payment/redirect/7f91f98e-f77a-4192-974c-367829f2f8af/payment-option-form/?source=link&preference-id=7497496-078480bd-d3c6-41ad-b7d6-24d8f22d6701&router-request-id=8802e0dc-d151-4fa8-946f-3588ed508d9c&p=52ba087f87203012a4c374f08c8e7f78" target="_blank" id="btnComprar" class="btn btn-lg btn-success">
+  <i class="bi bi-cart-plus"></i> Comprar </>
+</div>

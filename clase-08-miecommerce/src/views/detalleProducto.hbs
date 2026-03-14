@@ -1,3 +1,35 @@
 
 
-{{mensaje}} - {{id}} - {{producto.nombre}} - {{producto.precio}} - {{producto.descripcion}} - {{producto.imagen}}
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-sm">
+        <img src="{{producto.imagen}}" class="card-img-top img-fluid" alt="{{producto.nombre}}">
+        <div class="card-body">
+          <h2 class="card-title">{{producto.nombre}}</h2>
+          <p class="card-text text-muted mb-1">Categoría: {{categoria}}</p>
+          <p class="card-text mb-2">{{producto.descripcion}}</p>
+          <h4 class="text-primary">$ {{producto.precio}}</h4>
+
+          <div class="d-flex align-items-center justify-content-between mt-4">
+            <div>
+              <span class="badge bg-success">Stock: {{stock}}</span>
+            </div>
+
+            <h3>{{producto._id}}</h3>
+
+            <a href="/api/compras/carrito/{{producto._id}}" id="btnComprar" class="btn btn-lg btn-success">
+              <i class="bi bi-cart-plus"></i> Comprar
+            </>
+          </div>
+
+          {{!-- opcional: cantidad --}}
+          <div class="mt-3">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <input id="cantidad" type="number" min="1" max="{{stock}}" value="1" class="form-control w-25">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
