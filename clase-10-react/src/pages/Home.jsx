@@ -1,0 +1,53 @@
+
+
+
+const Home = () => {
+  return (
+
+<div class="container mt-5">
+  <div class="container mt-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold">Bienvenidos a Mi Ecommerce</h1>
+        <p class="lead text-muted">Encuentra los mejores productos con excelentes precios</p>
+        <a href="#" class="btn btn-primary btn-lg">Comenzar a Comprar</a>
+      </div>
+      <div class="col-lg-6">
+        <img src="https://picsum.photos/seed/picsum/500/300" class="img-fluid rounded" alt="Bienvenida"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">📦 Envíos Rápidos</h5>
+            <p class="card-text">Recibe tu pedido en el menor tiempo posible</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">💰 Precios Competitivos</h5>
+            <p class="card-text">Las mejores ofertas del mercado</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">🛡️ Compra Segura</h5>
+            <p class="card-text">Tu dinero protegido con nosotros</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  )
+}
+
+export default Home;
