@@ -1,0 +1,40 @@
+
+const Productos = () =>{
+  return(
+    <div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2>Formulario de Productos</h2>
+      <form id="productForm" action="/api/productos/guardarProducto" method="POST">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="precio" class="form-label">Precio</label>
+          <input type="number" class="form-control" id="precio" name="precio" step="0.01" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="descripcion" class="form-label">Descripción</label>
+          <textarea class="form-control" id="descripcion" name="descripcion" rows="4" required></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="imagen" class="form-label">Imagen</label>
+          <input type="text" class="form-control" id="imagen" name="imagen" required />
+        </div>
+
+        <div class="d-flex gap-2">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="reset" class="btn btn-secondary">Limpiar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+    </div>
+  )
+}
+
+export default Productos;

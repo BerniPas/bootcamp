@@ -1,4 +1,6 @@
 
+//importo Link de react-router-dom
+import { Link } from 'react-router-dom'
 
 
 //Crear un componente de navegación
@@ -15,16 +17,13 @@ const Navegacion = () => {
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav ms-auto">
         <li className="nav-item">
-          <a className="nav-link" href="/">Home</a>
+          <Link className="nav-link" to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/login">Login</a>
+          <Link className="nav-link" to="/login">Login</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/api/productos/dameFormulario">Formulario de Productos</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/api/productos/listarProductos">Productos</a>
+          <Link className="nav-link" to="/listar">Productos</Link>
         </li>
       </ul>
     </div>
