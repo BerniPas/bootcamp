@@ -1,30 +1,36 @@
 
 // Librerías
-const express = require('express');
-const morgan = require('morgan');
-const hbs = require('express-handlebars');
-const path = require('path');
+import express from 'express';
+import morgan from 'morgan';
+import cors from 'cors';
 
 // Importar rutas
-const usuariosRouter = require('./routes/usuariosRoutes');
-const productosRouter = require('./routes/productosRoutes');
+import usuariosRouter from './routes/usuariosRoutes.js';
+import productosRouter from './routes/productosRoutes.js';
 
 // Crear el servidor
 const app = express();
 
 // Middleware
+//app.use(cors()); // todos los origenes pueden acceder a mi servidor
+app.use(cors({
+    maxAge: 0,
+    origin: 'http://localhost:5173, http://localhost:3000',//solo con el dominio deployado del front
+    methods: 'GET, POST, PUT, DELETE'
+}));// permito que cualquier origen acceda a mi servidor
 app.use(morgan('dev')); //datos de las peticiones en consola
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Servir los archivos estáticos (css, js, imágenes) desde la carpeta public
-app.use(express.static(path.join(__dirname, '../public')));
+app.get("/", (req, res) => {
+    res.send("Vivo en el Backend");
+})
 
 // Utilizamos las Rutas
 app.use('/api/usuarios', usuariosRouter);
 app.use('/api/productos', productosRouter);
 
 // Exportar el servidor
-module.exports = app;
+export  default app;
 
 

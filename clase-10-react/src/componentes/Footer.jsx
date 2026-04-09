@@ -4,6 +4,9 @@
 //1. Importamos React y Component
 import { Component } from 'react';
 
+// Importamos el archivo de datos
+import { anioActual } from '../config/datos';
+
 // Las clases eran las únicas que podían utilizar los estados y los ciclos de vida.
 import { useEffect, useState } from 'react';
 
@@ -50,7 +53,7 @@ class Footer extends Component {
 
 
     <div className="text-center">
-      <p className="mb-0">&copy; 2024 Mi E-commerce. Todos los derechos reservados.</p>
+      <p className="mb-0">&copy; {anioActual} Mi E-commerce. Todos los derechos reservados.</p>
     </div>
   </div>
       </footer>

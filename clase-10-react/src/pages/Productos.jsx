@@ -1,10 +1,12 @@
+// Importamos el archivo de datos
+import { anioActual } from '../config/datos';
 
 const Productos = () =>{
   return(
     <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <h2>Formulario de Productos</h2>
+      <h2>Formulario de Productos de { anioActual }</h2>
       <form id="productForm" action="/api/productos/guardarProducto" method="POST">
         <div class="mb-3">
           <label for="nombre" class="form-label">Nombre</label>

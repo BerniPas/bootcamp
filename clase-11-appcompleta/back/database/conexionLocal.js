@@ -1,10 +1,10 @@
 
 
 // 1. Importar mongoose para obtener la función de conexión a MongoDB
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 // 2. Importar dotenv para cargar las variables de entorno
-const dotenv = require('dotenv');
+import dotenv from 'dotenv';
 dotenv.config();
 
 // 3. Uri de conexión a MongoDB local
@@ -24,4 +24,4 @@ const conexionMongoLocal = async () => {
 
 }
 
-module.exports = conexionMongoLocal;
+export { conexionMongoLocal };

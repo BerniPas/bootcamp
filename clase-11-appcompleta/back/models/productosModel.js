@@ -1,7 +1,7 @@
 
 
 //1. Importar Mongoose
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 //2. Definir el esquema del modelo
 const productoSchema = new mongoose.Schema({
@@ -32,4 +32,4 @@ const productoSchema = new mongoose.Schema({
 
 
 //3. Exportar el modelo
-module.exports = mongoose.model('producto', productoSchema);
+export default mongoose.model('producto', productoSchema);;

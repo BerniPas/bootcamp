@@ -1,17 +1,17 @@
 
 // Librerias
-const dotenv = require('dotenv')
+import dotenv from 'dotenv';
 dotenv.config();
 
 // Importar el servidor
-const app = require('./app');
+import app from './app.js';
 
 // Levantar el servidor
 const PORT = process.env.PORT || 8080;
 
 // 1. Conexión a MongoDB Atlas
 // Importar la función de conexión a MongoDB
-const conexionMongo = require('./database/conexionAtlas');
+import { conexionMongo } from './database/conexionAtlas.js';
 
 // Establecer la conexión a MongoDB antes de iniciar el servidor
 conexionMongo();

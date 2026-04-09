@@ -1,21 +1,17 @@
 
 // Improtamos express y el router
-const { Router } = require('express');
+import { Router } from 'express';
 const router = Router();
 
 // Importamos el controlador de productos para mostrar el formulario de productos
-const { 
-    dameFormulario,
+import { 
     guardarProducto,
     listarProductos,
     detallesProducto
-} = require('../controllers/productosController');
+} from '../controllers/productosController.mjs';
 
 
 // Rutas de productos: responden a /api/productos..
-
-//1. Ruta para mostrar el formulario de productos
-router.get('/dameFormulario', dameFormulario);
 
 //2. Ruta para procesar el formulario de productos
 router.post('/guardarProducto', guardarProducto);
@@ -27,4 +23,4 @@ router.get('/listarProductos', listarProductos);
 router.get('/detalleProducto/:id', detallesProducto);
 
 // Exportar el router
-module.exports = router;
+export default router;

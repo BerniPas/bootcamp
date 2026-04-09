@@ -1,5 +1,5 @@
 
-const ProductosModel = require('../models/productosModel');
+import ProductosModel from '../models/productosModel.js';
 
 const  guardarProducto = async (req, res) => {
   //Desestructuramos los datos recibidos en el cuerpo de la petición
@@ -68,7 +68,7 @@ const detallesProducto = async (req, res) => {
 
 }
 
-module.exports = {
+export {
     guardarProducto,
     listarProductos,
     detallesProducto

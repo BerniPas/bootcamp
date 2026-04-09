@@ -3,7 +3,7 @@
 //* Esta collección se llama usuarios y tiene el siguiente esquema:
 
 //1. Importar Mongoose
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 //2. Crear el esquema de usuario
 const usuarioCollection = new mongoose.Schema({
@@ -45,8 +45,8 @@ const usuarioCollection = new mongoose.Schema({
 const UsuarioModel = mongoose.model('usuario', usuarioCollection);
 
 //4. Exportar el modelo de usuario
-module.exports = UsuarioModel;
+export default UsuarioModel;
 
 
 // 5. las dos a la vez
-//module.exports = mongoose.model('usuario', usuarioCollection);
+//export default UsuarioModel;
