@@ -11,7 +11,8 @@ const router = Router();
 
 // Importamos la función de registro de usuario
 import { 
-  registrarUsuario
+  registrarUsuario,
+  loginUsuario
 } from '../controllers/usuariosController.js';
 
 // Esta ruta responde a /api/usuarios..
@@ -26,6 +27,12 @@ router.post('/registro',
 
 // aplicamos nuestro middleware personalizado
 // router.post('/registro', verificacionPersonal, registrarUsuario);
+
+//Post para el login
+router.post('/login', [
+  body("email", "El email es obligatorio").isEmail().trim().notEmpty(),
+  body("password", "La contraseña es obligatoria").isAlphanumeric().trim().notEmpty().isLength({min: 6, max: 12}),
+], loginUsuario);
 
 // Exportamos el router
 export default router;

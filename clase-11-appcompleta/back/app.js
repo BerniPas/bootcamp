@@ -12,12 +12,12 @@ import productosRouter from './routes/productosRoutes.js';
 const app = express();
 
 // Middleware
-//app.use(cors()); // todos los origenes pueden acceder a mi servidor
-app.use(cors({
+app.use(cors()); // todos los origenes pueden acceder a mi servidor
+/* app.use(cors({
     maxAge: 0,
     origin: 'http://localhost:5173, http://localhost:3000',//solo con el dominio deployado del front
     methods: 'GET, POST, PUT, DELETE'
-}));// permito que cualquier origen acceda a mi servidor
+})); */// permito que cualquier origen acceda a mi servidor
 app.use(morgan('dev')); //datos de las peticiones en consola
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

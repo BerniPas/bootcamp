@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently --kill-others \"cd back && npm run dev\" \"cd front && npm start\""
+    "app": "concurrently --kill-others \"cd back && npm run server\" \"cd front && npm run dev\""
   },
   "keywords": [],
   "author": "",
