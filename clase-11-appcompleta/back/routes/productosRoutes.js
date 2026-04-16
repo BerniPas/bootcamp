@@ -3,6 +3,8 @@
 import { Router } from 'express';
 const router = Router();
 
+import { body } from "express-validator";
+
 // Importamos el controlador de productos para mostrar el formulario de productos
 import { 
     guardarProducto,

@@ -27,7 +27,7 @@ export const enviarMail = async(nombre, email) => {
                 to: email,
                 subject: 'Registro de Usuario',
                 text: `Hola ${nombre}, tu cuenta ha sido registrada con éxito.`,
-                html: `<h1>Registro de Usuario</h1><p>Hola ${nombre}, tu cuenta ha sido registrada con éxito. Gracias por confiar en nuestra aplicación.</p><p>`,
+                html: `<h1>Registro de Usuario</h1><p>Hola ${nombre}, tu cuenta ha sido registrada con éxito. Gracias por confiar en nuestra aplicación.</p>`,
             };
 
             // enviar el email

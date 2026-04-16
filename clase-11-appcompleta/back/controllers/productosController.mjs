@@ -4,11 +4,13 @@ import ProductosModel from '../models/productosModel.js';
 const  guardarProducto = async (req, res) => {
   //Desestructuramos los datos recibidos en el cuerpo de la petición
   const nuevoProducto = {
-    nombre: req.body.nombre,
-    precio: req.body.precio,
-    descripcion: req.body.descripcion,
-    imagen: req.body.imagen
+    nombre: req.body.nombreProducto,
+    precio: req.body.precioProducto,
+    descripcion: req.body.descripcionProducto,
+    imagen: req.body.imagenProducto
   };
+
+  console.log(nuevoProducto);
 
   // Creamos una nueva instancia del modelo Producto con los datos recibidos
 const crearProducto = new ProductosModel(nuevoProducto);
